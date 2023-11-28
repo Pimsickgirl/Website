@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHUSPK.XYZ</title>
+    <link rel="icon" href="Image/14clov.ico" type="image/x-icon">
+    <script src="script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lexend Deca' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-ws8M46x6U+7e7dlz0bCUn9pW8T1Nq2v7dFTt9n6LsyjzEeL62ZtRjkV5yXe6Z+xkdjxpXnF8VBir7HD6BbImqGtB2DQF8kA9" crossorigin="anonymous">
+    <style>
+
+        body {
+            font-family: 'Lexend Deca', sans-serif;
+        }
+        
+        body {
+            background: url('Image/00.jpg') fixed;
+            background-size: cover;
+            animation: slide 20s infinite linear;
+        }
+
+        @keyframes slide {
+            0% {
+                background-position: 0% 0%;
+            }
+
+            100% {
+                background-position: 100% 0%;
+            }
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 600px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .close-btn {
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            color: #555;
+        }
+
+        .close-btn:hover {
+            color: #333;
+        }
+
+        @keyframes moveText {
+            0% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(20px);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        .animated-text {
+            animation: moveText 2s infinite;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <!-- Navbar -->
+    <nav class="bg-gray-800 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="mx-auto text-center">
+                <a href="https://phuspkxyz.wordpress.com/about-2/" class="text-white hover:text-gray-300 transition duration-300 ease-in-out mr-4 focus:outline-none focus:underline focus:text-gray-300">Home</a>
+                <a href="#section1" class="text-white hover:text-gray-300 transition duration-300 ease-in-out mr-4 focus:outline-none focus:underline focus:text-gray-300">About</a>
+                <a href="#Contact" class="text-white hover:text-gray-300 transition duration-300 ease-in-out focus:outline-none focus:underline focus:text-gray-300">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+ <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2 class="text-3xl font-bold mb-4 text-gray-700 animated-text">Welcome to PHUSPK.XYZ</h2>
+            <p class="text-gray-600 font-bold">Contact us on <a href="https://www.facebook.com/suphakan.seeya/" class="text-blue-500">Facebook</a></p>
+            <p id="current-time" class="text-gray-700 font-bold"></p>
+            <br><img src="Image/mary.jpg" alt="ติดต่อ Facebook : Suphakan Seeya" class="w-full max-w-lg rounded-md">
+        </div>
+    </div>
+
+    
+        <!-- Section 1 -->
+        <div class="container mx-auto p-8 bg-white rounded-md shadow-lg mt-3">
+        <div id="section1">
+            <h1 class="text-3xl font-bold mb-4 text-center text-gray-700">งานที่ 1 เป้าหมายและอาชีพที่อยากจะเป็นในอนาคต</h1>
+            <div class="flex justify-center mb-4 text-center">
+                <img src="Image/ssss.jpg" alt="ภาพอาชีพ" class="w-full max-w-lg rounded-md">
+            </div>
+        </div>
+                <div id="expertise" class="w-100 flex flex-col items-center mx-6 scroll-mt-24">
+                    <div class="md:w-3/5 text-left text-center">
+                        <h3 class="text-4xl text-slate-900 font-extrabold">แนวทางการประกอบอาชีพ</h3>
+                        <p class="font-semibold text-gray-600 mt-4">การที่นักเรียนจะตัดสินใจว่าในอนาคตต้องการประกอบอาชีพใดนั้น
+                            <br>มีองค์ประกอบหลายอย่างที่ควรนำมาพิจารณากันอย่างรอบคอบก่อนการตัดสินใจ<br>
+                            โดยมีข้อคิดในการตัดสินใจเลือกทางศึกษาต่อ ดังนี้…</p>
+                    </div>
+                </div>
+                <div class="flex items-start mx-6 flex-row justify-around md:justify-evenly md:gap-20 h-auto">
+                    <div class="flex flex-col mt-8 md:justify-between md:ml-0 h-full">
+                        <h4 class="text-3xl text-slate-800 font-extrabold"></h4>
+                        <div>
+                            <div>
+                                <p class="font-semibold text-gray-600 mt-4"> 1. เริ่มต้นด้วยฐานการศึกษา</p>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-600 mt-4"> 2. ฝึกทักษะการเขียนโค้ด</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col ml-10 mt-8 md:justify-between md:ml-0 h-full">
+                        <h4 class="text-3xl text-slate-800 font-extrabold"></h4>
+                        <div>
+                            <div>
+                                <p class="font-semibold text-gray-600 mt-4">  3. การเรียนรู้เทคโนโลยีใหม่</p>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-600 mt-4">4. ยอมรับและเรียนรู้จากความผิดพลาด</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- certified -->
+<div id="certified" class="w-100 flex flex-col items-center mx-6 mt-1 scroll-mt-24">
+    <div class="flex flex-row justify-center flex-wrap gap-x-10 gap-y-12 mt-8">
+        <div class="flex flex-col rounded-lg shadow bg-white max-w-xs">
+            <div class="flex flex-col p-6">
+                <h5 class="text-xl text-sky-900 font-extrabold text-center">1. เริ่มต้นด้วยฐานการศึกษา</h5>
+                <p class="font-semibold text-gray-600 mt-2">ศึกษาเกี่ยวกับคอมพิวเตอร์และโปรแกรมมิ่ง ทำความเข้าใจเกี่ยวกับภาษาโปรแกรมต่าง ๆ เช่น Python, Java, C++, JavaScript เป็นต้น.</p>
+                <br><img src="https://media.tenor.com/93-RI-xQ8r0AAAAd/that-was-our-basic-education-for-it-james.gif" alt="test">
+            </div>
+        </div>
+        <div class="flex flex-col rounded-lg shadow bg-white max-w-xs">
+            <div class="flex flex-col p-6">
+                <h5 class="text-xl text-sky-900 font-extrabold text-center">2. ฝึกทักษะการเขียนโค้ด</h5>
+                <p class="font-semibold text-gray-600 mt-2">เริ่มต้นทดลองเขียนโค้ดด้วยโปรแกรมง่าย ๆ เพื่อเรียนรู้ไปเรื่อย ๆ และเพิ่มความสามารถในการเขียนโค้ด.</p>
+                <br><img src="https://media.tenor.com/GfSX-u7VGM4AAAAC/coding.gif" alt="test">
+                </a>
+            </div>
+        </div>
+        <div class="flex flex-col rounded-lg shadow bg-white max-w-xs">
+            <div class="flex flex-col p-6">
+                <h5 class="text-xl text-sky-900 font-extrabold text-center">3. การเรียนรู้เทคโนโลยีใหม่</h5>
+                <p class="font-semibold text-gray-600 mt-2">ตลอดเวลามีการพัฒนาทางเทคโนโลยี รักษาการทำงานของคุณโดยการเรียนรู้และปรับตัวกับเทคโนโลยีใหม่ ๆ.</p>
+                <br><img src="Image/ssssa.gif" alt="GIF Description">
+                </a>
+            </div>
+        </div>
+        <div class="flex flex-col rounded-lg shadow bg-white max-w-xs">
+            <div class="flex flex-col p-6">
+                <h5 class="text-xl text-sky-900 font-extrabold text-center">4. ยอมรับและเรียนรู้จากความผิดพลาด</h5>
+                <p class="font-semibold text-gray-600 mt-2">การทำงานในฐานะโปรแกรมเมอร์มักพบปัญหาและข้อผิดพลาด การยอมรับและเรียนรู้จากนั้นเป็นส่วนสำคัญของการเติบโตในอาชีพ.</p>
+                <br><img src="https://media.tenor.com/QOCVYMp4JEAAAAAd/my-mistake-my-bad.gif" alt="MISTAKE">
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div id="Contact">
+    <div class="flex flex-wrap justify-center">
+
+        <div class="max-w-md mx-4 my-10 p-6 bg-white rounded-md shadow-md text-center" id="Contact">
+            <h1 class="text-2xl font-bold mb-4 text-gray-600">Contact Admin</h1>
+            <div class="mt-4">
+                <iframe src="https://discordapp.com/widget?id=686934992152297513&amp;theme=dark" width="400" height="350" allowtransparency="true" frameborder="0"></iframe>
+            </div>
+        </div>
+    
+        <div class="max-w-md mx-4 my-10 p-6 bg-white rounded-md shadow-md">
+            <p class="text-2xl font-bold mb-4 text-green-400 text-center">Spotify</p>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6EUxYlPgUbVSGJXo7uqq8d?utm_source=generator" width="400" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+    
+    </div>
+</div>
+  
+<footer class="container mx-auto p-3 text-black rounded-md text-center mt-1">
+    <p class="text-lg">Copyright © 2023. Suphakan Seeya All rights reserved</p>
+    <p id="visitCount" class="text-sm">Total Visits: <span id="count">0</span></p>
+</footer>
+</body>
+
+</html>

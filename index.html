@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHUSPK.XYZ</title>
-    <link rel="icon" href="1001.ico" type="image/x-icon">
+    <link rel="icon" href="14clov.ico" type="image/x-icon">
+    <script src="modal.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-ws8M46x6U+7e7dlz0bCUn9pW8T1Nq2v7dFTt9n6LsyjzEeL62ZtRjkV5yXe6Z+xkdjxpXnF8VBir7HD6BbImqGtB2DQF8kA9" crossorigin="anonymous">
     <style>
@@ -24,6 +25,56 @@
                 background-position: 100% 0%;
             }
         }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 600px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .close-btn {
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            color: #555;
+        }
+
+        .close-btn:hover {
+            color: #333;
+        }
+
+        @keyframes moveText {
+            0% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(20px);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        .animated-text {
+            animation: moveText 2s infinite;
+        }
     </style>
 </head>
 
@@ -32,12 +83,22 @@
     <nav class="bg-gray-800 p-4">
         <div class="container mx-auto flex justify-between items-center">
             <div class="mx-auto text-center">
-                <a href="https://phuspkxyz.wordpress.com/about-2/" class="text-white mr-4">Home</a>
-                <a href="#section1" class="text-white mr-4">About</a>
-                <a href="#Contact" class="text-white mr-4">Contact</a>
+                <a href="https://phuspkxyz.wordpress.com/about-2/" class="text-white hover:text-gray-300 transition duration-300 ease-in-out mr-4 focus:outline-none focus:underline focus:text-gray-300">Home</a>
+                <a href="#section1" class="text-white hover:text-gray-300 transition duration-300 ease-in-out mr-4 focus:outline-none focus:underline focus:text-gray-300">About</a>
+                <a href="#Contact" class="text-white hover:text-gray-300 transition duration-300 ease-in-out focus:outline-none focus:underline focus:text-gray-300">Contact</a>
             </div>
         </div>
     </nav>
+
+ <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2 class="text-3xl font-bold mb-4 text-gray-700 animated-text">Welcome to PHUSPK.XYZ</h2>
+            <p class="text-gray-600 font-bold animated-text">Contact us on <a href="https://www.facebook.com/suphakan.seeya/" class="text-blue-500">Facebook</a></p>
+            <br><img src="mary.jpg" alt="ติดต่อ Facebook : Suphakan Seeya" class="w-full max-w-lg rounded-md">
+        </div>
+    </div>
     
         <!-- Section 1 -->
         <div class="container mx-auto p-8 bg-white rounded-md shadow-lg mt-3">
@@ -127,15 +188,14 @@
     <!-- Contact -->
 <div id="Contact">
     <div class="max-w-md mx-auto my-10 p-6 bg-white rounded-md shadow-md text-center">
-        <h1 class="text-2xl font-bold mb-4 text-gray-600">Contact Admin</h1>
+        <h1 class="text-2xl font-bold mb-4 text-gray-600">- Contact Admin -</h1>
         <div class="mt-4">
-            <p>Contact us on <a href="https://www.facebook.com/suphakan.seeya" class="text-blue-500">Facebook</a></p>
-            <p>Contact us on <a href="https://discord.gg/afte2yf7gz" class="text-blue-500">Discord</a></p>
+            <iframe src="https://discordapp.com/widget?id=686934992152297513&amp;theme=dark" width="400" height="350" allowtransparency="true" frameborder="0"></iframe>
         </div>
     </div>
 </div>
 
-<div id="Youtube">
+<div id="Spotify">
     <div class="max-w-md mx-auto my-10 p-6 bg-white rounded-md shadow-md">
         <p class="text-2xl font-bold mb-4 text-green-400 text-center">Spotify</p>
         <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3KkXRkHbMCARz0aVfEt68P?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
